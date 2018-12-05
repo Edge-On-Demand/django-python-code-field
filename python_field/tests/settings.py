@@ -7,10 +7,7 @@ PROJECT_DIR = os.path.dirname(__file__)
 
 DATABASES = {
     'default':{
-        'ENGINE': 'django.db.backends.sqlite3',
-        # Don't do this. It dramatically slows down the test.
-#        'NAME': '/tmp/python_field.db',
-#        'TEST_NAME': '/tmp/python_field.db',
+        'ENGINE': 'django.db.backends.sqlite3'
     }
 }
 
@@ -40,7 +37,7 @@ class DisableMigrations(object):
 #SOUTH_TESTS_MIGRATE = False # Use syncdb <= Django 1.8
 SOUTH_TESTS_MIGRATE = True # Use migrate
 #if django.VERSION > (1, 8, 0): # > Django 1.8
-# if django.VERSION > (1, 7, 0): # > Django 1.8 
+# if django.VERSION > (1, 7, 0): # > Django 1.8
 #     MIGRATION_MODULES = DisableMigrations()
 
 if django.VERSION < (1, 7, 0):
@@ -64,8 +61,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    #'django.middleware.transaction.TransactionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.locale.LocaleMiddleware',    
+    'django.middleware.locale.LocaleMiddleware'
 )

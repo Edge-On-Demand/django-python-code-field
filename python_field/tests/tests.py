@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 import os
 from datetime import timedelta, date
 import time
@@ -24,9 +22,6 @@ warnings.simplefilter('error', RuntimeWarning)
 socket.gethostname = lambda: 'localhost'
 
 class Tests(TestCase):
-    
-    #fixtures = ['test_jobs.json']
-    
     def setUp(self):
         pass
         
